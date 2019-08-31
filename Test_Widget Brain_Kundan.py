@@ -22,6 +22,9 @@ df_aggr = df.groupby(pd.Grouper(key='date', freq='15T'))['amount'].agg('sum')
 df_final = df_aggr.to_frame().reset_index()
 df_final.index.names=["Transactions"]
 
+#download as csv
+df_final.to_csv(r"C:\Users\Kundan\Desktop\WidgetBrain_test\salesdata2019.csv")
+
 """
 Sample o/p for 
 
